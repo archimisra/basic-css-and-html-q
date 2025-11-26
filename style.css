@@ -1,0 +1,56 @@
+.animated-box {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+
+    /* Allows movement */
+    position: relative;
+    cursor: pointer;
+
+    /* Smooth changes */
+    transition: 0.3s;
+}
+
+/* Start animation on hover */
+.animated-box:hover {
+    animation: boxMove 4s linear;
+}
+
+@keyframes boxMove {
+
+    /* Step 1 – Start */
+    0% {
+        transform: translate(0, 0) scale(1);
+        background-color: #1abc9c;   /* Teal */
+    }
+
+    /* Step 2 – Move Right + Resize + Color Change */
+    25% {
+        transform: translate(200px, 0) scale(1.2);
+        background-color: #3498db;   /* Blue */
+    }
+
+    /* Step 3 – Move Down + Resize + Color Change */
+    50% {
+        transform: translate(200px, 200px) scale(0.9);
+        background-color: #9b59b6;   /* Purple */
+    }
+
+    /* Step 4 – Move Left + Resize + Color Change */
+    75% {
+        transform: translate(0, 200px) scale(1.3);
+        background-color: #e67e22;   /* Orange */
+    }
+
+    /* Step 5 – Move Up (back) + Resize + Color Change */
+    100% {
+        transform: translate(0, 0) scale(1);
+        background-color: #e74c3c;   /* Red */
+    }
+}
+
+
+
